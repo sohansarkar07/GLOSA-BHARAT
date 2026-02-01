@@ -17,7 +17,12 @@
   --border-color: #e2e8f0;
   --chakra-opacity: 0.06;
   --chakra-filter: invert(15%) sepia(95%) saturate(3000%) hue-rotate(200deg);
-  /* Official Navy Blue */
+  /* Official Navy Blue tint */
+
+  /* Indian Theme Colors */
+  --saffron-text: #FF9933;
+  --green-text: #138808;
+  --navy-text: #000080;
 }
 
 .dark {
@@ -29,6 +34,11 @@
   --border-color: #1e293b;
   --chakra-opacity: 0.12;
   --chakra-filter: brightness(2) saturate(0);
+
+  /* Indian Theme Colors - Dark Mode Adjustments */
+  --saffron-text: #faa34d;
+  --green-text: #22c55e;
+  --navy-text: #f8fafc;
 }
 
 body {
@@ -150,15 +160,15 @@ body {
 
 /* Government Style Utilities */
 .text-saffron {
-  color: #FF9933;
+  color: var(--saffron-text);
 }
 
 .text-green {
-  color: #138808;
+  color: var(--green-text);
 }
 
 .text-navy {
-  color: #000080;
+  color: var(--navy-text);
 }
 
 .gov-gradient-text {
