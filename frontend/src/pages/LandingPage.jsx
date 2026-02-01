@@ -1,15 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
-    CheckCircle2,
-    Leaf,
-    ShieldCheck,
     Zap,
     ArrowRight,
-    Globe,
-    Cpu,
     Trophy,
-    Navigation,
     Sun,
     Moon
 } from 'lucide-react';
@@ -23,7 +17,7 @@ const LandingPage = () => {
             window.matchMedia('(prefers-color-scheme: dark)').matches;
     });
 
-    React.useEffect(() => {
+    useEffect(() => {
         if (isDarkMode) {
             document.documentElement.classList.add('dark');
         } else {
