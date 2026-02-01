@@ -149,7 +149,7 @@ const LandingPage = () => {
                         { img: "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=400&h=300&fit=crop", title: "Eco-Conscious", desc: "Targeting 15% reduction in national fuel imports through traffic optimization." },
                         { img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop", title: "National AI", desc: "Indigenous neural networks trained on diverse Indian road patterns." },
                         { img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop", title: "Secure Cloud", desc: "Data processed locally on sovereign secured infrastructure." },
-                        { img: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=400&h=300&fit=crop", title: "Smart Tier-II", desc: "Scalable architecture for the next 100 Indian Smart Cities." }
+                        { img: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&h=300&fit=crop", title: "Smart Tier-II", desc: "Scalable architecture for the next 100 Indian Smart Cities." }
                     ].map((f, i) => (
                         <div key={i} className="group p-8 rounded-none border border-[var(--border-color)] border-t-4 border-t-saffron hover:bg-[var(--bg-hover)] transition-all bg-[var(--bg-card)] official-card shadow-sm flex flex-col items-start text-left">
                             <div className="w-full h-32 rounded-none overflow-hidden mb-6 filter grayscale group-hover:grayscale-0 transition-all bg-slate-100 dark:bg-slate-800 border border-[var(--border-color)]">
