@@ -15,9 +15,9 @@
   --text-primary: #1e293b;
   --text-secondary: #64748b;
   --border-color: #e2e8f0;
-  --chakra-opacity: 0.08;
-  --chakra-filter: invert(14%) sepia(95%) auto;
-  /* Darker blue for light mode */
+  --chakra-opacity: 0.06;
+  --chakra-filter: invert(15%) sepia(95%) saturate(3000%) hue-rotate(200deg);
+  /* Official Navy Blue */
 }
 
 .dark {

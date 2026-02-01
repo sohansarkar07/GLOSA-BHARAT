@@ -256,7 +256,7 @@ const Dashboard = () => {
 
                         <div className="space-y-6">
                             <section className="gov-card border-none bg-indigo-900 text-white overflow-hidden relative">
-                                <div className="chakra-bg opacity-[0.05]" />
+
                                 <h2 className="text-[10px] font-black text-indigo-300 uppercase tracking-widest mb-6 px-2">Driver Advisory Feed</h2>
 
                                 <div className="flex flex-col items-center justify-center p-4 text-center">
@@ -435,7 +435,7 @@ const Dashboard = () => {
             <Sidebar isConnected={isConnected} activeTab={activeTab} setActiveTab={setActiveTab} />
 
             <main className="main-content relative overflow-hidden min-h-screen">
-                <div className="chakra-bg opacity-[0.02]" />
+
                 {renderContent()}
             </main>
         </div>
