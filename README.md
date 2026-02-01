@@ -23,10 +23,17 @@
 
 The project is built on a 4-Stage Enterprise Architecture:
 
-1.  **Perception Layer**: Intelligent Edge using Computer Vision (`YOLOv8`, `OpenCV`) to detect traffic density.
-2.  **Orchestration Layer**: Centralized Node.js microservice managing data flow and synchronization.
-3.  **Advisory Engine**: Mathematical models and predictive analytics for speed optimization.
-4.  **Interaction Layer**: Futuristic React.js dashboard with Framer Motion animations and Socket.io for real-time updates.
+```mermaid
+graph TD
+    Junction((Traffic Junction)) -->|CCTV Stream| PL[Perception Layer: YOLOv8/OpenCV]
+    PL -->|Density Analytics| OL[Orchestration Layer: Node.js]
+    OL -->|Storage| DB[(MongoDB)]
+    OL -->|Traffic State| AE[Advisory Engine: AI/ML Models]
+    AE -->|Optimal Speed| OL
+    OL -->|Socket.io| IL[Interaction Layer: React Dashboard]
+    IL -->|HUD / Advisory| User((Driver / Authority))
+```
+
 
 ---
 
