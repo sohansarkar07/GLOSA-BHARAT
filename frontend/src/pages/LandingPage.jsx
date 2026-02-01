@@ -32,39 +32,39 @@ const LandingPage = () => {
     }, [isDarkMode]);
 
     return (
-        <div className="bg-[var(--bg-primary)] min-h-screen font-sans selection:bg-blue-100 selection:text-blue-900 transition-colors duration-300 relative overflow-hidden">
-            {/* Indian Theme Background Elements */}
-            <div className="chakra-bg" />
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 via-white to-green-600 opacity-50 z-[60]" />
-            <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 via-white to-green-600 opacity-50 z-[60]" />
-
+        <div className="bg-[var(--bg-primary)] min-h-screen font-sans selection:bg-blue-100 selection:text-blue-900 transition-colors duration-300">
             <WhitepaperModal isOpen={isWhitepaperOpen} onClose={() => setIsWhitepaperOpen(false)} />
 
             {/* Header / Navbar */}
             <nav className="fixed top-0 w-full z-50 bg-[var(--bg-card)]/80 backdrop-blur-xl border-b border-[var(--border-color)] px-6 py-4">
                 <div className="max-w-7xl mx-auto flex justify-between items-center">
                     <div className="flex items-center gap-3">
-                        <div className="bg-blue-600 p-2 rounded-lg shadow-lg shadow-blue-200">
-                            <Navigation className="h-6 w-6 text-white" />
-                        </div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg" alt="GOI" className="h-10 dark:invert" />
+                        <div className="h-8 w-px bg-[var(--border-color)] mx-1"></div>
                         <div>
-                            <h1 className="text-xl font-black text-[var(--text-primary)] leading-none">GLOSA-BHARAT</h1>
-                            <p className="text-[10px] uppercase tracking-widest text-[var(--text-secondary)] font-bold mt-1">Smart Mobility Infrastructure</p>
+                            <h1 className="text-xl font-black text-[var(--text-primary)] leading-none tracking-tight">
+                                <span className="text-saffron">GLOSA</span>
+                                <span className="text-navy dark:text-white">-</span>
+                                <span className="text-green">BHARAT</span>
+                            </h1>
+                            <p className="text-[9px] uppercase tracking-[0.2em] text-[var(--text-secondary)] font-bold mt-1">Government of India Initiative</p>
                         </div>
                     </div>
 
-                    <div className="hidden md:flex items-center gap-8 text-sm font-bold text-[var(--text-secondary)]">
-                        <a href="#" className="hover:text-blue-600 transition-colors">Atmanirbhar Bharat</a>
-                        <a href="#" className="hover:text-blue-600 transition-colors">Digital India</a>
-                        <button
-                            onClick={() => setIsDarkMode(!isDarkMode)}
-                            className="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-                        >
-                            {isDarkMode ? <Sun className="h-5 w-5 text-yellow-500" /> : <Moon className="h-5 w-5 text-slate-800" />}
-                        </button>
-                        <Link to="/dashboard" className="bg-slate-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-full hover:bg-black transition-all hover:scale-105 active:scale-95 shadow-lg shadow-slate-200">
-                            Open Dashboard
-                        </Link>
+                    <div className="hidden md:flex items-center gap-8 text-[11px] font-black uppercase tracking-widest text-[var(--text-secondary)]">
+                        <a href="#" className="hover:text-saffron transition-colors border-b-2 border-transparent hover:border-saffron pb-1">Atmanirbhar Bharat</a>
+                        <a href="#" className="hover:text-green transition-colors border-b-2 border-transparent hover:border-green pb-1">Digital India</a>
+                        <div className="flex items-center gap-4 border-l border-[var(--border-color)] pl-8">
+                            <button
+                                onClick={() => setIsDarkMode(!isDarkMode)}
+                                className="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                            >
+                                {isDarkMode ? <Sun className="h-4 w-4 text-yellow-500" /> : <Moon className="h-4 w-4 text-slate-800" />}
+                            </button>
+                            <Link to="/dashboard" className="bg-navy dark:bg-blue-700 text-white px-6 py-2 rounded-sm hover:brightness-110 transition-all shadow-md active:translate-y-0.5">
+                                ACCESS PORTAL
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -82,12 +82,14 @@ const LandingPage = () => {
                             <span className="text-[10px] font-black text-orange-700 dark:text-orange-400 uppercase tracking-widest">Atmanirbhar Bharat Initiative</span>
                         </div>
 
-                        <h1 className="text-6xl md:text-7xl font-black text-[var(--text-primary)] leading-[1.1] mb-8">
-                            Empowering <span className="text-blue-600">Smart Cities</span> with Intelligent Traffic
+                        <h1 className="text-6xl md:text-8xl font-black text-[var(--text-primary)] leading-[1.05] mb-8 tracking-tighter">
+                            <span className="text-saffron">Indigenizing</span> <br />
+                            <span className="text-[var(--text-primary)]">Urban</span> <br />
+                            <span className="text-green">Mobility</span>
                         </h1>
 
-                        <p className="text-lg text-[var(--text-secondary)] font-medium max-w-xl mb-10 leading-relaxed">
-                            Green Light Optimal Speed Advisory (GLOSA) implementation for urban India. Reduce fuel imports, slash emissions, and transform mobility with indigenous AI.
+                        <p className="text-xl text-[var(--text-secondary)] font-bold max-w-xl mb-10 leading-relaxed border-l-4 border-saffron pl-6">
+                            Implementing the National GLOSA Framework for optimized traffic flow. Built to strengthen the <span className="text-saffron italic">Atmanirbhar</span> vision.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 mb-20 text-center">
@@ -141,24 +143,21 @@ const LandingPage = () => {
                 {/* Features Grid */}
                 <div className="max-w-7xl mx-auto mt-32 grid md:grid-cols-4 gap-6">
                     {[
-                        { img: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=400", title: "Eco-Conscious", desc: "Estimated fuel saving of ~15% in pilot cities by reducing idle time." },
-                        { img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=400", title: "Precision AI", desc: "LSTM-based neural networks predicting signal phases with 98% accuracy." },
-                        { img: "https://images.unsplash.com/photo-1451187530224-ad81d940fd89?auto=format&fit=crop&q=80&w=400", title: "Gov-Grade", desc: "Built on high-compliance secure analytics for national infrastructure." },
-                        { img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=400", title: "Scalable", desc: "Ready for deployment across Tier-1 and Tier-2 Indian smart cities." }
+                        { img: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=400", title: "Eco-Conscious", desc: "Targeting 15% reduction in national fuel imports through traffic optimization." },
+                        { img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=400", title: "National AI", desc: "Indigenous neural networks trained on diverse Indian road patterns." },
+                        { img: "https://images.unsplash.com/photo-1451187530224-ad81d940fd89?auto=format&fit=crop&q=80&w=400", title: "Secure Cloud", desc: "Data processed locally on sovereign secured infrastructure." },
+                        { img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=400", title: "Smart Tier-II", desc: "Scalable architecture for the next 100 Indian Smart Cities." }
                     ].map((f, i) => (
-                        <div key={i} className="group p-8 rounded-3xl border border-[var(--border-color)] hover:border-blue-100 hover:bg-blue-50/30 transition-all bg-[var(--bg-card)]">
-                            <div className="w-16 h-16 rounded-2xl overflow-hidden mb-6 shadow-md shadow-slate-200">
+                        <div key={i} className="group p-8 rounded-none border border-[var(--border-color)] border-t-4 border-t-saffron hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all bg-[var(--bg-card)] official-card shadow-sm">
+                            <div className="w-16 h-16 rounded-none overflow-hidden mb-6 filter grayscale group-hover:grayscale-0 transition-all">
                                 <img
                                     src={f.img}
                                     alt={f.title}
-                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                                    onError={(e) => {
-                                        e.target.src = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=400";
-                                    }}
+                                    className="w-full h-full object-cover"
                                 />
                             </div>
-                            <h3 className="text-lg font-black text-[var(--text-primary)] mb-2">{f.title}</h3>
-                            <p className="text-sm text-[var(--text-secondary)] font-medium leading-relaxed">{f.desc}</p>
+                            <h3 className="text-lg font-black text-navy dark:text-white mb-2 uppercase tracking-wide">{f.title}</h3>
+                            <p className="text-xs text-[var(--text-secondary)] font-bold leading-relaxed">{f.desc}</p>
                         </div>
                     ))}
                 </div>

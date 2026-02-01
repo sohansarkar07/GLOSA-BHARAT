@@ -10,20 +10,25 @@
   --ashoka: #000088;
 
   /* Theme Variables - Light Mode */
-  --bg-primary: #f1f5f9;
+  --bg-primary: #f8fafc;
   --bg-card: #ffffff;
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --border-color: #cbd5e1;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --border-color: #e2e8f0;
+  --chakra-opacity: 0.08;
+  --chakra-filter: invert(14%) sepia(95%) auto;
+  /* Darker blue for light mode */
 }
 
 .dark {
   /* Theme Variables - Dark Mode */
-  --bg-primary: #0f172a;
-  --bg-card: #1e293b;
-  --text-primary: #ffffff;
-  --text-secondary: #cbd5e1;
-  --border-color: #334155;
+  --bg-primary: #020617;
+  --bg-card: #0f172a;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --border-color: #1e293b;
+  --chakra-opacity: 0.12;
+  --chakra-filter: brightness(2) saturate(0);
 }
 
 body {
@@ -120,17 +125,17 @@ body {
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/17/Ashoka_Chakra.svg');
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.05;
+  opacity: var(--chakra-opacity);
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 800px;
-  height: 800px;
+  width: 900px;
+  height: 900px;
   z-index: 0;
   pointer-events: none;
-  animation: rotate-chakra 120s linear infinite;
-  filter: grayscale(1) brightness(var(--chakra-brightness));
+  animation: rotate-chakra 180s linear infinite;
+  filter: var(--chakra-filter);
 }
 
 @keyframes rotate-chakra {
@@ -143,10 +148,27 @@ body {
   }
 }
 
-:root {
-  --chakra-brightness: 0.2;
+/* Government Style Utilities */
+.text-saffron {
+  color: #FF9933;
 }
 
-.dark {
-  --chakra-brightness: 2;
+.text-green {
+  color: #138808;
+}
+
+.text-navy {
+  color: #000080;
+}
+
+.gov-gradient-text {
+  background: linear-gradient(to bottom, #FF9933 33%, #FFFFFF 33%, #FFFFFF 66%, #138808 66%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.official-card {
+  border-top: 4px solid #FF9933;
+  border-bottom: 4px solid #138808;
 }
