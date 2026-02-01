@@ -152,10 +152,10 @@ const LandingPage = () => {
                 {/* Features Grid */}
                 <div className="max-w-7xl mx-auto mt-32 grid md:grid-cols-4 gap-6">
                     {[
-                        { img: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=400", title: "Eco-Conscious", desc: "Targeting 15% reduction in national fuel imports through traffic optimization." },
-                        { img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=400", title: "National AI", desc: "Indigenous neural networks trained on diverse Indian road patterns." },
-                        { img: "https://images.unsplash.com/photo-1451187530224-ad81d940fd89?auto=format&fit=crop&q=80&w=400", title: "Secure Cloud", desc: "Data processed locally on sovereign secured infrastructure." },
-                        { img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=400", title: "Smart Tier-II", desc: "Scalable architecture for the next 100 Indian Smart Cities." }
+                        { img: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=400", title: "Eco-Conscious", desc: "Targeting 15% reduction in national fuel imports through traffic optimization." },
+                        { img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=400", title: "National AI", desc: "Indigenous neural networks trained on diverse Indian road patterns." },
+                        { img: "https://images.unsplash.com/photo-1558494949-ef010bd501c1?auto=format&fit=crop&q=80&w=400", title: "Secure Cloud", desc: "Data processed locally on sovereign secured infrastructure." },
+                        { img: "https://images.unsplash.com/photo-1573164713988-8df2565de74d?auto=format&fit=crop&q=80&w=400", title: "Smart Tier-II", desc: "Scalable architecture for the next 100 Indian Smart Cities." }
                     ].map((f, i) => (
                         <div key={i} className="group p-8 rounded-none border border-[var(--border-color)] border-t-4 border-t-saffron hover:bg-[var(--bg-hover)] transition-all bg-[var(--bg-card)] official-card shadow-sm">
                             <div className="w-16 h-16 rounded-none overflow-hidden mb-6 filter grayscale group-hover:grayscale-0 transition-all bg-[var(--bg-primary)] flex items-center justify-center">
