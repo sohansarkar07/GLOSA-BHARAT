@@ -152,21 +152,14 @@ const LandingPage = () => {
                 {/* Features Grid */}
                 <div className="max-w-7xl mx-auto mt-32 grid md:grid-cols-4 gap-6">
                     {[
-                        { img: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=400", title: "Eco-Conscious", desc: "Targeting 15% reduction in national fuel imports through traffic optimization." },
-                        { img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=400", title: "National AI", desc: "Indigenous neural networks trained on diverse Indian road patterns." },
-                        { img: "https://images.unsplash.com/photo-1558494949-ef010bd501c1?auto=format&fit=crop&q=80&w=400", title: "Secure Cloud", desc: "Data processed locally on sovereign secured infrastructure." },
-                        { img: "https://images.unsplash.com/photo-1573164713988-8df2565de74d?auto=format&fit=crop&q=80&w=400", title: "Smart Tier-II", desc: "Scalable architecture for the next 100 Indian Smart Cities." }
+                        { icon: Leaf, title: "Eco-Conscious", desc: "Targeting 15% reduction in national fuel imports through traffic optimization.", color: "text-green" },
+                        { icon: Cpu, title: "National AI", desc: "Indigenous neural networks trained on diverse Indian road patterns.", color: "text-saffron" },
+                        { icon: ShieldCheck, title: "Secure Cloud", desc: "Data processed locally on sovereign secured infrastructure.", color: "text-navy" },
+                        { icon: Globe, title: "Smart Tier-II", desc: "Scalable architecture for the next 100 Indian Smart Cities.", color: "text-blue-600" }
                     ].map((f, i) => (
                         <div key={i} className="group p-8 rounded-none border border-[var(--border-color)] border-t-4 border-t-saffron hover:bg-[var(--bg-hover)] transition-all bg-[var(--bg-card)] official-card shadow-sm">
-                            <div className="w-16 h-16 rounded-none overflow-hidden mb-6 filter grayscale group-hover:grayscale-0 transition-all bg-[var(--bg-primary)] flex items-center justify-center">
-                                <img
-                                    src={f.img}
-                                    alt={f.title}
-                                    className="w-full h-full object-cover"
-                                    onError={(e) => {
-                                        e.target.src = "https://images.unsplash.com/photo-1579546673283-4a861d9a24d2?auto=format&fit=crop&q=80&w=100";
-                                    }}
-                                />
+                            <div className="w-16 h-16 rounded-none mb-6 bg-[var(--bg-primary)] flex items-center justify-center border border-[var(--border-color)] group-hover:border-saffron transition-colors">
+                                <f.icon className={`h-8 w-8 ${f.color} transition-transform group-hover:scale-110`} />
                             </div>
                             <h3 className="text-lg font-black text-navy dark:text-white mb-2 uppercase tracking-wide">{f.title}</h3>
                             <p className="text-xs text-[var(--text-secondary)] font-bold leading-relaxed">{f.desc}</p>
