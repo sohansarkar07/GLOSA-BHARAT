@@ -146,22 +146,18 @@ const LandingPage = () => {
                 {/* Features Grid */}
                 <div className="max-w-7xl mx-auto mt-32 grid md:grid-cols-4 gap-6">
                     {[
-                        { img: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=400", title: "Eco-Conscious", desc: "Targeting 15% reduction in national fuel imports through traffic optimization." },
-                        { img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=400", title: "National AI", desc: "Indigenous neural networks trained on diverse Indian road patterns." },
-                        { img: "https://images.unsplash.com/photo-1597733336794-12d05021d510?auto=format&fit=crop&q=80&w=400", title: "Secure Cloud", desc: "Data processed locally on sovereign secured infrastructure." },
-                        { img: "https://images.unsplash.com/photo-1567613015024-8718f2604928?auto=format&fit=crop&q=80&w=400", title: "Smart Tier-II", desc: "Scalable architecture for the next 100 Indian Smart Cities." }
+                        { img: "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=400&h=300&fit=crop", title: "Eco-Conscious", desc: "Targeting 15% reduction in national fuel imports through traffic optimization." },
+                        { img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop", title: "National AI", desc: "Indigenous neural networks trained on diverse Indian road patterns." },
+                        { img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop", title: "Secure Cloud", desc: "Data processed locally on sovereign secured infrastructure." },
+                        { img: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=400&h=300&fit=crop", title: "Smart Tier-II", desc: "Scalable architecture for the next 100 Indian Smart Cities." }
                     ].map((f, i) => (
                         <div key={i} className="group p-8 rounded-none border border-[var(--border-color)] border-t-4 border-t-saffron hover:bg-[var(--bg-hover)] transition-all bg-[var(--bg-card)] official-card shadow-sm flex flex-col items-start text-left">
-                            <div className="w-full h-32 rounded-none overflow-hidden mb-6 filter grayscale group-hover:grayscale-0 transition-all bg-[var(--bg-primary)] border border-[var(--border-color)]">
+                            <div className="w-full h-32 rounded-none overflow-hidden mb-6 filter grayscale group-hover:grayscale-0 transition-all bg-slate-100 dark:bg-slate-800 border border-[var(--border-color)]">
                                 <img
                                     src={f.img}
                                     alt={f.title}
                                     className="w-full h-full object-cover"
-                                    onError={(e) => {
-                                        e.target.style.display = 'none';
-                                        e.target.parentElement.style.backgroundColor = '#1e293b';
-                                        e.target.parentElement.innerHTML = '<div class="text-[10px] text-white p-4 font-black">IMAGE OFFLINE</div>';
-                                    }}
+                                    loading="lazy"
                                 />
                             </div>
                             <h3 className="text-lg font-black text-navy dark:text-white mb-2 uppercase tracking-wide">{f.title}</h3>
