@@ -32,7 +32,12 @@ const LandingPage = () => {
     }, [isDarkMode]);
 
     return (
-        <div className="bg-[var(--bg-primary)] min-h-screen font-sans selection:bg-blue-100 selection:text-blue-900 transition-colors duration-300">
+        <div className="bg-[var(--bg-primary)] min-h-screen font-sans selection:bg-blue-100 selection:text-blue-900 transition-colors duration-300 relative overflow-hidden">
+            {/* Indian Theme Background Elements */}
+            <div className="chakra-bg" />
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 via-white to-green-600 opacity-50 z-[60]" />
+            <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 via-white to-green-600 opacity-50 z-[60]" />
+
             <WhitepaperModal isOpen={isWhitepaperOpen} onClose={() => setIsWhitepaperOpen(false)} />
 
             {/* Header / Navbar */}
@@ -61,7 +66,7 @@ const LandingPage = () => {
                             >
                                 {isDarkMode ? <Sun className="h-4 w-4 text-yellow-500" /> : <Moon className="h-4 w-4 text-slate-800" />}
                             </button>
-                            <Link to="/dashboard" className="bg-navy dark:bg-blue-700 text-white px-6 py-2 rounded-sm hover:brightness-110 transition-all shadow-md active:translate-y-0.5">
+                            <Link to="/dashboard" className="bg-navy dark:bg-blue-700 text-white !text-white px-6 py-2 rounded-sm hover:brightness-110 transition-all shadow-md active:translate-y-0.5 font-black">
                                 ACCESS PORTAL
                             </Link>
                         </div>
