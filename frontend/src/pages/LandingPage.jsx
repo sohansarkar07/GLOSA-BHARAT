@@ -68,7 +68,7 @@ const LandingPage = () => {
                             </button>
                             <Link
                                 to="/dashboard"
-                                className="bg-navy dark:bg-blue-700 px-6 py-2 rounded-sm hover:brightness-110 transition-all shadow-md active:translate-y-0.5 font-black uppercase text-[11px] tracking-widest text-white leading-none flex items-center justify-center"
+                                className="bg-[#000080] dark:bg-blue-700 px-6 py-2 rounded-sm hover:brightness-110 transition-all shadow-md active:translate-y-0.5 font-black uppercase text-[11px] tracking-widest text-white leading-none flex items-center justify-center"
                                 style={{ color: 'white' }}
                             >
                                 ACCESS PORTAL
