@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --saffron: #FF9933;
+  --white: #FFFFFF;
+  --green: #138808;
+  --navy: #000080;
+  --ashoka: #000088;
+
+  /* Theme Variables - Light Mode */
+  --bg-primary: #f1f5f9;
+  --bg-card: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --border-color: #cbd5e1;
+}
+
+.dark {
+  /* Theme Variables - Dark Mode */
+  --bg-primary: #0f172a;
+  --bg-card: #1e293b;
+  --text-primary: #ffffff;
+  --text-secondary: #cbd5e1;
+  --border-color: #334155;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  margin-left: 16rem;
+  /* matches sidebar width (w-64) */
+  width: calc(100% - 16rem);
+  background-color: var(--bg-primary);
+  min-height: 100vh;
+  padding: 2.5rem;
+}
+
+.gov-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  padding: 1.5rem;
+}
+
+.dark .gov-card {
+  background-image: linear-gradient(to bottom right, var(--bg-card), rgba(255, 255, 255, 0.02));
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.metric-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px var(--border-color);
+}
+
+.dark .metric-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+}
+
+.status-badge {
+  @apply px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider;
+}
+
+.status-online {
+  @apply bg-green-50 text-green-600;
+}
+
+.status-active {
+  @apply bg-blue-50 text-blue-600;
+}
+
+.status-operational {
+  @apply bg-indigo-50 text-indigo-600;
+}
+
+.status-monitoring {
+  @apply bg-orange-50 text-orange-600;
+}
+
+.signal-red {
+  @apply bg-red-600 shadow-signal-red;
+}
+
+.signal-green {
+  @apply bg-green-600 shadow-signal-green;
+}
+
+.signal-amber {
+  @apply bg-yellow-500 shadow-signal-amber;
+}
+
+.chakra-bg {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/17/Ashoka_Chakra.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.03;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  z-index: -1;
+  pointer-events: none;
+}
