@@ -120,13 +120,33 @@ body {
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/17/Ashoka_Chakra.svg');
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.03;
-  position: absolute;
+  opacity: 0.05;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 600px;
-  height: 600px;
-  z-index: -1;
+  width: 800px;
+  height: 800px;
+  z-index: 0;
   pointer-events: none;
+  animation: rotate-chakra 120s linear infinite;
+  filter: grayscale(1) brightness(var(--chakra-brightness));
+}
+
+@keyframes rotate-chakra {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+:root {
+  --chakra-brightness: 0.2;
+}
+
+.dark {
+  --chakra-brightness: 2;
 }
