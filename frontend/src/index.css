@@ -15,6 +15,7 @@
   --text-primary: #1e293b;
   --text-secondary: #64748b;
   --border-color: #e2e8f0;
+  --bg-hover: #f1f5f9;
   --chakra-opacity: 0.06;
   --chakra-filter: invert(15%) sepia(95%) saturate(3000%) hue-rotate(200deg);
   /* Official Navy Blue tint */
@@ -32,6 +33,7 @@
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
   --border-color: #1e293b;
+  --bg-hover: #1e293b;
   --chakra-opacity: 0.12;
   --chakra-filter: brightness(2) saturate(0);
 

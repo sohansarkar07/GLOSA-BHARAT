@@ -157,12 +157,15 @@ const LandingPage = () => {
                         { img: "https://images.unsplash.com/photo-1451187530224-ad81d940fd89?auto=format&fit=crop&q=80&w=400", title: "Secure Cloud", desc: "Data processed locally on sovereign secured infrastructure." },
                         { img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=400", title: "Smart Tier-II", desc: "Scalable architecture for the next 100 Indian Smart Cities." }
                     ].map((f, i) => (
-                        <div key={i} className="group p-8 rounded-none border border-[var(--border-color)] border-t-4 border-t-saffron hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all bg-[var(--bg-card)] official-card shadow-sm">
-                            <div className="w-16 h-16 rounded-none overflow-hidden mb-6 filter grayscale group-hover:grayscale-0 transition-all">
+                        <div key={i} className="group p-8 rounded-none border border-[var(--border-color)] border-t-4 border-t-saffron hover:bg-[var(--bg-hover)] transition-all bg-[var(--bg-card)] official-card shadow-sm">
+                            <div className="w-16 h-16 rounded-none overflow-hidden mb-6 filter grayscale group-hover:grayscale-0 transition-all bg-[var(--bg-primary)] flex items-center justify-center">
                                 <img
                                     src={f.img}
                                     alt={f.title}
                                     className="w-full h-full object-cover"
+                                    onError={(e) => {
+                                        e.target.src = "https://images.unsplash.com/photo-1579546673283-4a861d9a24d2?auto=format&fit=crop&q=80&w=100";
+                                    }}
                                 />
                             </div>
                             <h3 className="text-lg font-black text-navy dark:text-white mb-2 uppercase tracking-wide">{f.title}</h3>
